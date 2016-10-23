@@ -1,0 +1,35 @@
+<form method="POST" action="https://website.com/route/">
+  <fieldset>
+    <legend>
+      Legend
+    </legend>
+    <div>
+      <label for="name">
+        Your Name
+      </label>
+      <input type="text" id="name" name="name" pattern=".{1,}" required>
+    </div>
+    <div>
+      <label for="email">
+        Your Email
+      </label>
+      <input type="email" id="email" name="email" pattern=".{5,}" required>
+    </div>
+    <div>
+      <label for="text">
+        Your Message
+      </label>
+      <textarea rows="8" id="text" name="text" minlength="5" required>
+      </textarea>
+    </div>
+    <div hidden>
+      <!-- the honeypot: some bots will enter something here -->
+      <input type="text" name="confirm" value="" hidden>
+    </div>
+    <div>
+      <button type="submit">
+        Send
+      </button>
+    </div>
+  </fieldset>
+</form>
