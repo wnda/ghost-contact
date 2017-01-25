@@ -19,7 +19,8 @@ frontendControllers = {
           namePattern  = /.{1,40}/g,
           valEmail     = emailPattern.test( formEmail ),
           valBody      = bodyPattern.test( formBody ),
-          valName      = namePattern.test( formName );
+          valName      = namePattern.test( formName ),
+          mailOptions  = {};
 
       if (!valEmail || !valBody || !valName || formHoneypot.length > 0 || formHoneypot != "") {
           
@@ -27,7 +28,7 @@ frontendControllers = {
           
       } else {
 
-          var mailOptions = {
+          mailOptions = {
               from: formEmail,
               to: 'someone@somewhere.com', // your email address goes here
               subject: 'New submission from: ' + formName,
